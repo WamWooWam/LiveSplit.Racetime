@@ -125,7 +125,7 @@ namespace LiveSplit.Racetime
                         {
                             return CategoryImagesCache[id];
                         }
-                        else
+                        else if (race.Data.category.image != null)
                         {
                             WebClient wc = new WebClient();
                             byte[] bytes = wc.DownloadData(race.Data.category.image);
